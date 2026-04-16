@@ -1,0 +1,51 @@
+Name: GOKULAKRISHNAN G S
+Date of Submission: 25/03/2026
+Project Title: Inverted Search
+Description: The project implements an inverted indexing system similar to a basic search engine. It processes multiple text files,
+             extracts unique words, and stores them in a hash table structure. Each word node maintains a linked list of files 
+             where it appears along with frequency counts. The system supports database creation, real-time search operations, 
+             structured file saving, and database reconstruction. The implementation emphasizes efficient hashing, pointer-based 
+             memory management, and modular C programming practices.
+
+Sample Input: ./a.out file1.txt file2.txt
+
+Sample Output: INFO: Successfull: inserting file name file1.txt into file linked list
+               INFO: Successfull: inserting file name file2.txt into file linked list
+               Inputs Validation Successfull
+               Select your choice among following operations:
+               1. Create Database
+               2. Display Database
+               3. Save Database
+               4. Search
+               5. Update Database
+               6. Exit
+
+               Enter your choice : 1
+               INFO : Database created successfully
+
+               Enter your choice : 2
+               [Index: 0] [Word:are       ] [Files:2] [File:file1.txt Count:1] [File:file2.txt Count:1] 
+               [Index: 0] [Word:about     ] [Files:1] [File:file1.txt Count:1]
+               [Index: 0] [Word:am        ] [Files:1] [File:file1.txt Count:1]
+               [Index: 0] [Word:at        ] [Files:1] [File:file1.txt Count:2]
+               [Index: 0] [Word:and       ] [Files:1] [File:file1.txt Count:1]
+               [Index: 2] [Word:Code      ] [Files:1] [File:file1.txt Count:1]
+               [Index: 2] [Word:course    ] [Files:1] [File:file1.txt Count:1]
+               [Index: 2] [Word:completed ] [Files:1] [File:file1.txt Count:1]
+               [Index: 2] [Word:College.  ] [Files:1] [File:file1.txt Count:1]
+               [Index: 3] [Word:doing     ] [Files:1] [File:file1.txt Count:1]
+
+               Enter your choice : 3
+               Enter file name to save database: backupfile.txt
+               INFO : Database saved successfully
+
+               Enter your choice : 4
+               Enter the word to search: at
+               Word found!
+               Word : at
+               File Count : 1
+               File : file1.txt | Word Count : 2
+
+               Enter your choice : 5
+               Enter the saved file name: backupfile.txt
+               INFO : Database updated successfully
